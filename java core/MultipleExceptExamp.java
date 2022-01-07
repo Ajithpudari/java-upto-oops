@@ -1,0 +1,35 @@
+package com.java.multipleExceptexamp;
+
+public class MultipleExceptExamp {
+    public static void main(String[] args)
+    {
+        try
+        {
+            int a[] = new int[5];
+                    a[4] = 8;
+            int i = 7;
+            int j = 0;
+            int k=i/j;
+            System.out.println("output is " + k);
+	System.out.println("Bye");
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("Cannot divide by Zero ");
+//	 		System.out.println("Bye");
+        }
+        catch(ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println("Stay in your limit.. ");
+        }
+        catch(Exception e)
+        {
+            System.out.println("Something wrong..");
+        }
+        finally
+        {
+            System.out.println("Bye");
+        }
+
+    }
+}
